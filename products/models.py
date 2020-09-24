@@ -16,6 +16,10 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Catergories'
+
     category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(
