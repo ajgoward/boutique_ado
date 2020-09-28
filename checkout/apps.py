@@ -1,5 +1,8 @@
 from django.apps import AppConfig
 
 
-class CheeckoutConfig(AppConfig):
-    name = 'cheeckout'
+class CheckoutConfig(AppConfig):
+    name = 'checkout'
+
+    def ready(self):
+        import checkout.signals
